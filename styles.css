@@ -1,0 +1,88 @@
+.parent {
+  display: grid;
+  grid-template-columns: 30px 1fr 1fr 30px;
+  grid-template-rows: 300px 1fr 100px;
+  height: 2000px;
+  grid-template-areas:
+    ". header nav ."
+    ". main main . "
+    ". footer footer .";
+}
+
+header,
+nav,
+main,
+footer {
+  margin: 5px;
+  padding: 30px;
+}
+
+header {
+  font-family: "mystical snow", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  font-size: 15px;
+  background-color: rgb(82, 4, 56);
+  grid-area: header;
+  color: linen;
+}
+h3 {
+  font-family: "mystical snow", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  font-size: 30px;
+  color: rgb(82, 4, 56);
+}
+nav {
+  font-size: 20px;
+  color: linen;
+  background-color: rgb(82, 4, 56);
+  grid-area: nav;
+}
+main {
+  background-color: rgb(250, 225, 226);
+  grid-area: main;
+}
+footer {
+  background-color: rgb(82, 4, 56);
+  font-size: 10px;
+  grid-area: footer;
+  color: linen;
+}
+
+body {
+  color: rgb(82, 4, 56);
+  font-size: 30px;
+}
+
+@media (min-width: 1024px) {
+  .parent {
+    grid-template-rows: 200px 100px 1fr 100px;
+    grid-template-columns: 30px 1fr 200px 30px;
+    font-size: 80%;
+    grid-template-areas:
+      ". header header ."
+      ". nav nav ."
+      ". main main. "
+      ". footer footer .";
+  }
+
+  .navigation-links {
+    padding: 0px;
+    color: linen;
+  }
+  .navigation-links li {
+    color: linen;
+    display: inline;
+    margin: 10px;
+  }
+
+  .center-titel {
+    font-size: 50px;
+  }
+
+  .blogpost-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
